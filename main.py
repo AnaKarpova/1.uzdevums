@@ -1,9 +1,10 @@
-text = input("Ievadi tekstu: " ) #vajag ievadīt tekstu
-def deleteCombo(text): #deklarējam funkciju, arguments = teksts
-  if text.count("abc")>0: #pārbaudām, vai ir kaut viena kombinācija "abc"
-    text = text.replace("abc","") #"abc" vietā liekam ""
-  else:#citādā gadījumā
-    text = "Meklējamā kombonācija netika atrasta!" #aizvietojam tekstu ar paziņojumu
-  print(text) #rezultātu printēsim konsolē
-  return text #atgriežam vertību teksts
-deleteCombo(text) #Izsaucam funkciju
+text = input("Ievadiet tekstu: ")
+def countWords(text):
+  summa = 0
+  sar1 = text.split()
+  for word in sar1:
+    if len(word)>1:
+      summa += 1
+  print("Tekstā ir", summa , "vārdi")
+  return summa
+countWords(text)
