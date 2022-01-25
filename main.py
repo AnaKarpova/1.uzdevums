@@ -1,20 +1,9 @@
-text = input("Ievadi tekstu: ")
-def reverseText(text):
-  if len(text.split())>1:
-    sar1 = []
-    for burts in text:
-      sar1.append(burts)
-    sar1.reverse()
-    text = ""
-    for elements in sar1:
-      text += elements
-    text = text.upper()
-    if text.count(" ")>0:
-      text = text.replace(" ", ";")
-      text = text.upper()
-    print(text)
-  else:
-    text = "Parāk īss teksts!"
-    print(text)
-  return text
-reverseText(text)
+text = input("Ievadi tekstu: " ) #vajag ievadīt tekstu
+def deleteCombo(text): #deklarējam funkciju, arguments = teksts
+  if text.count("abc")>0: #pārbaudām, vai ir kaut viena kombinācija "abc"
+    text = text.replace("abc","") #"abc" vietā liekam ""
+  else:#citādā gadījumā
+    text = "Meklējamā kombonācija netika atrasta!" #aizvietojam tekstu ar paziņojumu
+  print(text) #rezultātu printēsim konsolē
+  return text #atgriežam vertību teksts
+deleteCombo(text) #Izsaucam funkciju
